@@ -2,6 +2,8 @@ services:
   publisher:
     build: ./publisher
     container_name: zmq_publisher
+    ports:
+      - "8080:8080"
 
   subscriber:
     build: ./subscriber
