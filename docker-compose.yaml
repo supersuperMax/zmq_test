@@ -1,0 +1,10 @@
+services:
+  publisher:
+    build: ./publisher
+    container_name: zmq_publisher
+
+  subscriber:
+    build: ./subscriber
+    container_name: zmq_subscriber
+    depends_on:
+      - publisher
